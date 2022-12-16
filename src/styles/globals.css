@@ -1,0 +1,279 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/Open_Sans/OpenSans-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/Open_Sans/OpenSans-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/Open_Sans/OpenSans-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/Open_Sans/OpenSans-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('./fonts/Gotham-Family/Gotham-Book.woff2') format('woff2'),
+    url('./fonts/Gotham-Family/Gotham-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('./fonts/Gotham-Family/Gotham-Medium.woff2') format('woff2'),
+    url('./fonts/Gotham-Family/Gotham-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('./fonts/Gotham-Family/Gotham-Bold_0.woff2') format('woff2'),
+    url('./fonts/Gotham-Family/Gotham-Bold_0.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('./fonts/Gotham-Family/Gotham-Black_0.woff2') format('woff2'),
+    url('./fonts/Gotham-Family/Gotham-Black_0.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* html{
+  scroll-behavior: smooth;
+} */
+
+.menu-underline {
+  opacity: 0;
+}
+
+.nav-menu:hover > .menu-underline {
+  opacity: 1;
+  transform: translateY(27px);
+  transition-duration: 200ms;
+}
+
+.home-bullet {
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+}
+.home-bullet::before {
+  content: url('/home_4/bullet.svg');
+  position: absolute;
+  left: -1rem;
+  top: 15%;
+}
+
+.atm-email-input::placeholder {
+  transform: skewX(12deg);
+}
+
+.atm-email-input::placeholder:focus {
+  display: none;
+  transform: skewX(12deg);
+}
+
+
+
+
+
+/* Terms and Conditions */
+
+.term {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+ol > li {
+  margin-bottom: 10px;
+}
+
+ol {
+  margin-left: 20px;
+}
+
+ul {
+  margin-left: 20px;
+}
+ul > li {
+  margin-bottom: 10px;
+}
+
+.alphabetical-list {
+  list-style-type: lower-alpha;
+}
+
+li > ol {
+  list-style-type: lower-roman;
+}
+
+/* End of Terms and Conditions */
+
+/* ATM */
+.input-container {
+  transform: skewX(-12deg);
+}
+
+.input-container > input {
+  background-color: transparent;
+  transform: skewX(12deg);
+}
+
+.input-container > input:focus {
+  outline: none;
+}
+
+.loading {
+  animation: loading 2s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* :target:before {
+  content: '';
+  display: block;
+  height: 100px;
+  margin-top: -50px;
+} */
+
+
+.pacman span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 2rem;
+  width: 4rem;
+  background-color: #9446ce;
+}
+.pacman .top::before {
+  top: 0;
+  border-radius: 4rem 4rem 0px 0px;
+}
+.pacman .bottom::before {
+  bottom: 0;
+  border-radius: 0px 0px 4rem 4rem;
+}
+.pacman .left::before {
+  bottom: 0;
+  height: 4rem;
+  width: 2rem;
+  border-radius: 4rem 0px 0px 4rem;
+}
+
+
+.next,
+.prev {
+  top: calc(50% - 20px);
+  position: absolute;
+  background: white;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+  transform: scale(-1);
+}
+
+.iframe-container{
+  position: relative;
+  width: 100%;
+  max-height: 454px;
+  max-width:774px;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  margin: 0 auto;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width:774px;
+  max-height: 454px;
+}
+
+.iframe-container .thumb{
+  position: absolute;
+  margin: 0 auto;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width:774px;
+  max-height: 454px;
+}
+
+input::-webkit-input-placeholder {
+  color: #110744;
+  font-family: 'Open Sans';
+  opacity: 0.2; /*Change the opacity between 0 and 1*/
+  font-weight: 600;
+}
+
+.break-out {
+  width: 100vw;
+  position: relative;
+  left: calc(50% - 50vw);
+}
